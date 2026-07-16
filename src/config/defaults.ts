@@ -1,0 +1,40 @@
+import type { AppSettings } from "@/features/settings/types";
+
+export const DEFAULT_SETTINGS: AppSettings = {
+  refreshIntervalMs: 30_000,
+  dataMode: "mock",
+  preferredChartRange: "1d",
+  usePreMarket: true,
+  useAfterMarket: true,
+  stalePriceMinutes: 20,
+  keepLastGoodData: true,
+  alertThresholds: {
+    caution: 3,
+    warning: 5,
+    danger: 10,
+  },
+  alertCooldowns: {
+    cautionMinutes: 30,
+    warningMinutes: 15,
+    dangerMinutes: 5,
+  },
+  recoveryAlertsEnabled: false,
+  premiumAlertsEnabled: true,
+  discountAlertsEnabled: true,
+  allowNightAlerts: false,
+  allowOffHoursAlerts: true,
+  enabledChannels: {
+    browser: true,
+    telegram: false,
+    discord: false,
+    slack: false,
+  },
+  stockAlertEnabled: {},
+  theme: "system",
+  viewMode: "card",
+  decimalPlaces: 2,
+  useKrwThousandsSeparator: true,
+  sortKey: "absoluteGapDesc",
+  filter: "all",
+  mockModeVisible: true,
+};
